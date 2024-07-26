@@ -16,7 +16,8 @@ with open("C:/Users/snatl/Documents/Coding/100 Days of Python/Mail Merger/"
     starting_letter = starting_file.read()
 
     for name in names:
-        # with open(f"C:/Users/snatl/Documents/Coding/100 Days of Python/Mail Merger/"
-        #           "Mail Merge Project Start/Output/ReadyToSend/" + name + ".txt", mode="w") as new_file:
-        #     new_file.write(starting_letter)
-        new_letter = new_file.replace("[name]", name)
+        new_letter = starting_letter.replace("[name]", name)
+
+        with open(f"C:/Users/snatl/Documents/Coding/100 Days of Python/Mail Merger/"
+                  "Mail Merge Project Start/Output/ReadyToSend/" + name + ".txt", mode="w") as new_file:
+            new_file.write(new_letterdf)
